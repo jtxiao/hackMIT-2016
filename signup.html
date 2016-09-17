@@ -9,17 +9,16 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Cover Template for Bootstrap</title>
+    <title>Signin Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -34,34 +33,29 @@
 
   <body>
 
-    <div class="site-wrapper">
+    <div class="container">
 
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="inner cover">
-            <h1 class="cover-heading">BARK</h1>
-            <p class="lead">Gotta catch 'em all</p>
-            <p class="lead">
-              <a href="signup.html" class="btn btn-lg btn-default">Sign Up</a>
-            </p>
-            <p class="lead">
-              <a href="login.html" class="btn btn-lg btn-default">Log In</a>
-            </p>
-          </div>
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Sign up for BARK</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="First Name" class="sr-only">First Name</label>
+        <input type="firstName" id="inputFirst" class="form-control" placeholder="First name" required autofocus>
+        <label for="Last Name" class="sr-only">Last Name</label>
+        <input type="lastName" id="inputLast" class="form-control" placeholder="Last name" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
         </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
 
-      </div>
+    </div> <!-- /container -->
 
-    </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
