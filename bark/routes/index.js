@@ -8,6 +8,7 @@ router.get('/', mainController.displayLoginPage);
 
 router.get('/login', mainController.loginSuccessful);
 
+router.get('/dashboard', mainController.displayDashboard);
 
 /* GET home page. */
 // router.get('/', function(req, res, next) {
