@@ -7,12 +7,26 @@ var cookieSession = require('cookie-session')
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
+var User = require('./models/User.js');
 
 var FACEBOOK_APP_ID = "1841282406094570";
 var FACEBOOK_APP_SECRET = "a30c84bbc74edffa521c945a6f268d99";
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+
+///// Database setup
+var mongoose = require('mongoose');
+// Connect to either the MONGODB_URI or to the local database.
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/kachmit2016');
+console.log(process.env.MONGODB_URI);
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+  console.log("database connected");
+});
+/////
 
 var app = express();
 // app.use(cookieSession()); // Express cookie session middleware 
@@ -90,13 +104,13 @@ passport.use(new FacebookStrategy({
     callbackURL: "http://localhost:3000/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
-    var user = profile;
-    console.log(user);
-    done(null, user);
-    // User.findOrCreate(..., function(err, user) {
-    //   if (err) { return done(err); }
-    //   done(null, user);
-    // });
+    // var user = profile;
+    // console.log(user);
+    // done(null, user);
+    User.findOrCreate(profile, function(err, user) {
+      if (err) { return done(err); }
+      done(null, user);
+    });
   }
 ));
 
