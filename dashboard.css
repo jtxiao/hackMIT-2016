@@ -27,6 +27,11 @@ p {color: white;
 font-family: Roboto;}
 >>>>>>> df700963a5c6ceeffbaa942d7707bfc46e0d4e8b
 
+#map {
+  height: 5000px;
+  width: 600 0px;
+}
+
 
 /*-------------------------------*/
 /*           Wrappers            */
