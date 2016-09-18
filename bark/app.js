@@ -3,6 +3,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var cookieSession = require('cookie-session')
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
@@ -14,6 +15,11 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+// app.use(cookieSession()); // Express cookie session middleware 
+app.use(cookieSession({
+  name: 'session',
+  keys: ['key1', 'key2']
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -84,7 +90,8 @@ passport.use(new FacebookStrategy({
     callbackURL: "http://localhost:3000/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
-    var user = {username: "test", profile: profile};
+    var user = profile;
+    console.log(user);
     done(null, user);
     // User.findOrCreate(..., function(err, user) {
     //   if (err) { return done(err); }

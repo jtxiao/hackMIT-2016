@@ -9,7 +9,8 @@ mainController.loginSuccessful = function(req, res, next) {
 }
 
 mainController.displayDashboard = function(req, res, next) {
-  res.render('dashboard', { username: 'Test_Username' });
+  console.log(req.session);
+  res.render('dashboard', { username: req.username });
 }
 
 module.exports = mainController;
