@@ -1,16 +1,24 @@
+@font-face { font-family: Moon-Light; src:url(fonts/Moon-Light.otf); }
+@font-face { font-family: Roboto; src:url(fonts/Roboto-Light.ttf); }
+@font-face { font-family: Ailerons; src:url(fonts/Ailerons-Typeface.otf); }
+
+
 body {
     position: relative;
     overflow-x: hidden;
 }
 body,
-html { height: 100%; background-image: url('images/wood.jpg');}
+html { height: 100%; background-image: url('images/wood2.jpg'); background-size: 100%}
 .nav .open > a, 
 .nav .open > a:hover, 
 .nav .open > a:focus {background-color: transparent;}
 
-h1 { color: white;}
-h2 { color: white;}
-p {color: white;}
+h1 { color: white;
+font-family: Moon-light;}
+h2 { color: white;
+font-family: Roboto;}
+p {color: white;
+font-family: Roboto;}
 
 
 /*-------------------------------*/
