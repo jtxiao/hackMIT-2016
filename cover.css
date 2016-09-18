@@ -1,7 +1,7 @@
 /*
  * Globals
  */
- @font-face { font-family: Moon; src:url(fonts/Moon Light.otf); }
+ @font-face { font-family: Moon-Light; src:url(fonts/Moon-Light.otf); }
  @font-face { font-family: Roboto; src:url(fonts/Roboto-Light.ttf); }
  @font-face { font-family: Ailerons; src:url(fonts/Ailerons-Typeface.otf); }
 
@@ -45,7 +45,7 @@ body {
   font-family: Roboto;
 }
 h1{
-  font-family: Moon light;
+  font-family: Moon-Light;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
