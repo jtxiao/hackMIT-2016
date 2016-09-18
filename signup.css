@@ -1,8 +1,27 @@
 body {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 15%;
 
   background-color: #fff;
+}
+
+input {
+  margin-top: 15px;
+}
+
+/* Custom default button */
+.btn{
+  background-color: transparent;
+  height: 50px;
+  align-items: center;
+  color: #2e6da4;
+  font-weight: 100;
+}
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  font-size: 24px;
+  border: 1px solid #fff;
+  font-weight: 100;
 }
 
 .form-signin {
